@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETHER | Advanced Quantum Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="calculator-card">
+        <header>
+            <div class="logo">AETHER<span>v2.0</span></div>
+            <div class="status-indicators">
+                <span class="dot pulse"></span>
+                <span class="mode-text">QUANTUM ENGINE ACTIVE</span>
+            </div>
+        </header>
+
+        <div class="display-container">
+            <div class="history-log" id="history-log"></div>
+            <div class="expression-line" id="expression">0</div>
+            <div class="result-line" id="result">READY</div>
+        </div>
+
+        <div class="controls-grid">
+            <div class="row functional">
+                <button class="btn func" onclick="clearAll()">AC</button>
+                <button class="btn func" onclick="input('(')">(</button>
+                <button class="btn func" onclick="input(')')">)</button>
+                <button class="btn func delete" onclick="backspace()">DEL</button>
+            </div>
+
+            <div class="row">
+                <button class="btn sci" onclick="input('sin(')">sin</button>
+                <button class="btn sci" onclick="input('cos(')">cos</button>
+                <button class="btn sci" onclick="input('tan(')">tan</button>
+                <button class="btn op" onclick="input('/')">÷</button>
+            </div>
+
+            <div class="row">
+                <button class="btn sci" onclick="input('log(')">log</button>
+                <button class="btn sci" onclick="input('sqrt(')">√</button>
+                <button class="btn sci" onclick="input('pi')">π</button>
+                <button class="btn op" onclick="input('*')">×</button>
+            </div>
+
+            <div class="row">
+                <button class="btn num" onclick="input('7')">7</button>
+                <button class="btn num" onclick="input('8')">8</button>
+                <button class="btn num" onclick="input('9')">9</button>
+                <button class="btn op" onclick="input('-')">-</button>
+            </div>
+
+            <div class="row">
+                <button class="btn num" onclick="input('4')">4</button>
+                <button class="btn num" onclick="input('5')">5</button>
+                <button class="btn num" onclick="input('6')">6</button>
+                <button class="btn op" onclick="input('+')">+</button>
+            </div>
+
+            <div class="row bottom">
+                <button class="btn num" onclick="input('1')">1</button>
+                <button class="btn num" onclick="input('2')">2</button>
+                <button class="btn num" onclick="input('3')">3</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Powered by Math.js for advanced scientific operations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
